@@ -1,0 +1,403 @@
+[gd_scene load_steps=24 format=4 uid="uid://cmi0nubulwasd"]
+
+[ext_resource type="Texture2D" uid="uid://c4x44cf4xt3bg" path="res://assets/Bg.png" id="1_ig7tw"]
+[ext_resource type="FontFile" uid="uid://2uogi8ffnv1o" path="res://assets/pixel_font.ttf" id="2_0xm2m"]
+[ext_resource type="Texture2D" uid="uid://ctq4voy4eermk" path="res://assets/external_bg.png" id="2_4c57u"]
+[ext_resource type="Script" uid="uid://c5ev8d2rpvqll" path="res://main.gd" id="2_h2yge"]
+[ext_resource type="Script" uid="uid://chdfi6cm3nf7w" path="res://player.gd" id="3_1bvp3"]
+[ext_resource type="Script" uid="uid://c280usa4kj2q4" path="res://cpu.gd" id="4_7mycd"]
+[ext_resource type="Script" uid="uid://6a5emf4jv6p4" path="res://ball.gd" id="4_lquwl"]
+[ext_resource type="Texture2D" uid="uid://blv1lymsvgvyf" path="res://assets/ball.png" id="6_272bh"]
+[ext_resource type="Texture2D" uid="uid://3t3bhyl2lru6" path="res://assets/border_red.png" id="9_4c57u"]
+[ext_resource type="Texture2D" uid="uid://co66gowqqra5g" path="res://assets/cross.png" id="9_efxa6"]
+[ext_resource type="Texture2D" uid="uid://cedne6w7cop15" path="res://assets/score_red.png" id="9_kek77"]
+[ext_resource type="PackedScene" uid="uid://clb3bldgxmww" path="res://pause_menu.tscn" id="12_iotsf"]
+[ext_resource type="AudioStream" uid="uid://cekw13ue5jt0l" path="res://assets/paddle.wav" id="13_7sc4i"]
+[ext_resource type="AudioStream" uid="uid://c0f0itphyq1xx" path="res://assets/scoreReversed.wav" id="15_7sc4i"]
+[ext_resource type="AudioStream" uid="uid://evgtnfh4wul5" path="res://assets/score.wav" id="15_e8heu"]
+[ext_resource type="PackedScene" uid="uid://c2wahesxqah6i" path="res://obstacle.tscn" id="16_80cx4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ig7tw"]
+size = Vector2(8, 100)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4c57u"]
+size = Vector2(8, 100)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0xm2m"]
+size = Vector2(14, 14)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h2yge"]
+size = Vector2(1152, 40)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1bvp3"]
+size = Vector2(1152, 40)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lquwl"]
+size = Vector2(48, 648)
+
+[sub_resource type="AudioStreamWAV" id="AudioStreamWAV_80cx4"]
+data = PackedByteArray("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AJIQJIQJIQIEhAkhAkhAkgECSECSECSEAJIQJIQJIQIEhAkhAkhAkgECSECSECSEAJIQJIQJIQIEhAkhAkhAkgECSECSECSEAJIQJIQJIQIEhAkhAkhAkgECSECSECSEAJIQJIQJIQIEhAkhAkhAkgECSECSECSEAJIQJIQJIQIEhAkhAkhAkgECSECSECSEAJIQJIQJIQIEhAkhAkhAkgECSECSECSEAJIQJIQJIQIEhAkhAkhAkgECSECSECSEAJIQJIQJIQIEhAkhAkhAkgECSECSECSEAJIQJIQJIQIEhAkhAkhAkgECSECSECSEAJIQJIQJIQIEhAkhAkhAkgECSECSECSEAJIQJIQJIQIEhAkhAkhAkgECSECSECSEAJIQJIQJIQIEhAkhAkhAkgECSECSECSEAJIQJIQJIQIEhAkhAkhAkgECSECSECSEAJIQJIQJIQIEhAkhAkhAkgECSECSECSEAJIQJIQJIQIEhAkhAkhAkgECSECSECSEAJIQJIQJIQIEhAkhAkhAkgECSECSECSEAJIQJIQJIQIEhAkhAkhAkgECSECSECSEAJIQJIQJIQIEhAkhAkhAkgECSECSECSEAJIQJIQJIQIEhAkhAkhAkgECSECSECSEAJIQJIQJIQIEhAkhAkhAkgECSECSECSEAJIQJIQJIQIEhAkhAkhAkgECSECSECSEAJIQJIQJIQIEhAkhAkhAkgECSECSECSEAQCsRAaPArj/Af8C/wH/AvBVIhvOhT9PAJIQJIQJIQIEhAkhAkhAkgECSECSECSEAJIQJIQJIQIEhAkhAkhAkgECSECSECSEAJIQJIQJIQIEhAkhAkhAkgECSECSECSEAJIQJIQJIQIEhAkhAkhAkgECSECSECSEAJIQJIQJIQIEhAkhAkhAkgECSECSECSEAJIQJIQJIQIEhAkhAkhAkgECSECSECSEAJIQJIQJIQIEhAkhAkhAkgECSECSECSEAJIQJIQJIQIEhAkhAkhAkgECSECSECSEAJIQJIQJIQIEhAkhAkhAkgECSECSECSEAJIQJIQJIQIEhAkhAkhAkgECSECSECSEAJIQJIQJIQIEhAkhAkhAkgECSECSECSEAJIQJIQJIQIEhAkhAkhAkgECSECSECSEAJIQJIQJIQIEhAkhAkhAkgECSECSECSEAJIQJIQJIQIEhAkhAkhAkgECSECSECSEAJIQJIQJIQIEhAkhAkhAkgECSECSECSEAJIQJIQJIQIEhAkhAkhAkgECSECSECSEAJIQJIQJIQIEhAkhAkhAkgECSECSECSEAJIQJIQJIQIEhAkhAkhAkgECSECSECSEAJIQJIQJIQIEhAkhAkhAkgECSECSECSEAJIQJIQJIQIEhAkhAkhAkgECSECSECSEAJIQJIQJIQIEhAkhAkhAkgECSECSECSEAJIQJIQJIQIEhAkhAkhAkgECSECSECSEAJIQJIQJIQIEhAkhAkhAkgECSECSECSEAJIQJIQJIQIEhAkhAkhAkgECSECSECSEAJIQJIQJIQIEhAkhAkhAkgECSECSECSEAJIQJIQJIQIEhAkhAkhAkgECSECSECSEAJIQJIQJIQIEhAkhAkhAkgECSECSECSEAJIQJIQJIQIEhAkhAkhAkgECSECSECSA")
+format = 3
+
+[node name="Main" type="Sprite2D"]
+texture_filter = 1
+position = Vector2(384, 170)
+centered = false
+script = ExtResource("2_h2yge")
+
+[node name="BallTimer" type="Timer" parent="."]
+one_shot = true
+
+[node name="FullBG" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(576, 370)
+texture = ExtResource("2_4c57u")
+
+[node name="Campo" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(270, 324)
+texture = ExtResource("1_ig7tw")
+
+[node name="NetCover" type="ColorRect" parent="."]
+visible = false
+offset_left = 260.0
+offset_right = 300.0
+offset_bottom = 648.0
+color = Color(0, 0, 0, 1)
+
+[node name="Player" type="StaticBody2D" parent="."]
+texture_filter = 1
+position = Vector2(-256, 324)
+scale = Vector2(1, 1.5)
+script = ExtResource("3_1bvp3")
+
+[node name="ColorRect" type="ColorRect" parent="Player"]
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -50.0
+offset_right = 20.0
+offset_bottom = 50.0
+grow_vertical = 2
+size_flags_horizontal = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
+position = Vector2(16, 0)
+shape = SubResource("RectangleShape2D_ig7tw")
+
+[node name="CPU" type="StaticBody2D" parent="."]
+position = Vector2(776, 324)
+scale = Vector2(1, 0.7)
+script = ExtResource("4_7mycd")
+
+[node name="ColorRect" type="ColorRect" parent="CPU"]
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -50.0
+offset_right = 20.0
+offset_bottom = 50.0
+grow_vertical = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CPU"]
+position = Vector2(4, 0)
+shape = SubResource("RectangleShape2D_4c57u")
+
+[node name="Ball" type="CharacterBody2D" parent="."]
+position = Vector2(270, 324)
+collision_mask = 3
+script = ExtResource("4_lquwl")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ball"]
+shape = SubResource("RectangleShape2D_0xm2m")
+
+[node name="Sprite2D" type="Sprite2D" parent="Ball"]
+texture_filter = 1
+texture = ExtResource("6_272bh")
+
+[node name="Borders" type="StaticBody2D" parent="."]
+position = Vector2(-306, 0)
+collision_layer = 2
+
+[node name="Top" type="CollisionShape2D" parent="Borders"]
+position = Vector2(576, -20)
+shape = SubResource("RectangleShape2D_h2yge")
+
+[node name="Bottom" type="CollisionShape2D" parent="Borders"]
+position = Vector2(576, 668)
+shape = SubResource("RectangleShape2D_1bvp3")
+
+[node name="ScoreLeft" type="Area2D" parent="."]
+position = Vector2(-306, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ScoreLeft"]
+position = Vector2(-24, 324)
+shape = SubResource("RectangleShape2D_lquwl")
+
+[node name="ScoreRight" type="Area2D" parent="."]
+position = Vector2(-306, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ScoreRight"]
+position = Vector2(1176, 324)
+shape = SubResource("RectangleShape2D_lquwl")
+
+[node name="Hud" type="CanvasLayer" parent="."]
+
+[node name="PlayerScore" type="Label" parent="Hud"]
+texture_filter = 1
+offset_left = 442.0
+offset_top = 96.0
+offset_right = 492.0
+offset_bottom = 146.0
+theme_override_fonts/font = ExtResource("2_0xm2m")
+theme_override_font_sizes/font_size = 50
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="CPU" type="Label" parent="Hud"]
+texture_filter = 1
+offset_left = 816.0
+offset_top = 96.0
+offset_right = 866.0
+offset_bottom = 146.0
+theme_override_fonts/font = ExtResource("2_0xm2m")
+theme_override_font_sizes/font_size = 50
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="LabelScore" type="Label" parent="Hud"]
+texture_filter = 1
+offset_left = 529.0
+offset_top = 51.0
+offset_right = 779.0
+offset_bottom = 101.0
+theme_override_fonts/font = ExtResource("2_0xm2m")
+theme_override_font_sizes/font_size = 50
+text = "Score"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="LevelTxt" type="Label" parent="Hud"]
+texture_filter = 1
+offset_left = 1407.0
+offset_top = 196.0
+offset_right = 1657.0
+offset_bottom = 246.0
+theme_override_fonts/font = ExtResource("2_0xm2m")
+theme_override_font_sizes/font_size = 50
+text = "Level"
+
+[node name="LevelNumber" type="Label" parent="Hud"]
+texture_filter = 1
+offset_left = 1686.0
+offset_top = 178.0
+offset_right = 1766.0
+offset_bottom = 258.0
+theme_override_fonts/font = ExtResource("2_0xm2m")
+theme_override_font_sizes/font_size = 80
+text = "1"
+
+[node name="PlayerStat" type="Label" parent="Hud"]
+texture_filter = 1
+offset_left = 212.0
+offset_top = 912.0
+offset_right = 482.0
+offset_bottom = 957.0
+theme_override_fonts/font = ExtResource("2_0xm2m")
+theme_override_font_sizes/font_size = 45
+text = "Player"
+
+[node name="PlayerSpeed" type="Label" parent="Hud"]
+texture_filter = 1
+offset_left = 77.0
+offset_top = 990.0
+offset_right = 287.0
+offset_bottom = 1025.0
+theme_override_fonts/font = ExtResource("2_0xm2m")
+theme_override_font_sizes/font_size = 35
+text = "Speed:"
+
+[node name="PlayerSize" type="Label" parent="Hud"]
+texture_filter = 1
+offset_left = 390.0
+offset_top = 990.0
+offset_right = 565.0
+offset_bottom = 1025.0
+theme_override_fonts/font = ExtResource("2_0xm2m")
+theme_override_font_sizes/font_size = 35
+text = "Size:"
+
+[node name="PlayerSpeedINT" type="Label" parent="Hud"]
+texture_filter = 1
+offset_left = 289.0
+offset_top = 990.0
+offset_right = 329.0
+offset_bottom = 1025.0
+theme_override_fonts/font = ExtResource("2_0xm2m")
+theme_override_font_sizes/font_size = 35
+text = "1"
+
+[node name="PlayerSizeINT" type="Label" parent="Hud"]
+texture_filter = 1
+offset_left = 570.0
+offset_top = 990.0
+offset_right = 610.0
+offset_bottom = 1025.0
+theme_override_fonts/font = ExtResource("2_0xm2m")
+theme_override_font_sizes/font_size = 35
+text = "1"
+
+[node name="CPUStat" type="Label" parent="Hud"]
+texture_filter = 1
+offset_left = 779.0
+offset_top = 912.0
+offset_right = 1139.0
+offset_bottom = 957.0
+theme_override_fonts/font = ExtResource("2_0xm2m")
+theme_override_font_sizes/font_size = 45
+text = "Computer"
+
+[node name="CPUSpeed" type="Label" parent="Hud"]
+texture_filter = 1
+offset_left = 677.0
+offset_top = 990.0
+offset_right = 887.0
+offset_bottom = 1025.0
+theme_override_fonts/font = ExtResource("2_0xm2m")
+theme_override_font_sizes/font_size = 35
+text = "Speed:"
+
+[node name="CPUSize" type="Label" parent="Hud"]
+texture_filter = 1
+offset_left = 992.0
+offset_top = 990.0
+offset_right = 1167.0
+offset_bottom = 1025.0
+theme_override_fonts/font = ExtResource("2_0xm2m")
+theme_override_font_sizes/font_size = 35
+text = "Size:"
+
+[node name="CPUSpeedINT" type="Label" parent="Hud"]
+texture_filter = 1
+offset_left = 889.0
+offset_top = 990.0
+offset_right = 929.0
+offset_bottom = 1025.0
+theme_override_fonts/font = ExtResource("2_0xm2m")
+theme_override_font_sizes/font_size = 35
+text = "1"
+
+[node name="CPUSizeINT" type="Label" parent="Hud"]
+texture_filter = 1
+offset_left = 1172.0
+offset_top = 990.0
+offset_right = 1212.0
+offset_bottom = 1025.0
+theme_override_fonts/font = ExtResource("2_0xm2m")
+theme_override_font_sizes/font_size = 35
+text = "1"
+
+[node name="HP" type="Label" parent="Hud"]
+texture_filter = 1
+offset_left = 1332.0
+offset_top = 945.0
+offset_right = 1602.0
+offset_bottom = 1015.0
+theme_override_fonts/font = ExtResource("2_0xm2m")
+theme_override_font_sizes/font_size = 45
+text = "Lives:"
+
+[node name="FirstLife" type="Sprite2D" parent="Hud"]
+texture_filter = 1
+position = Vector2(1656, 975)
+texture = ExtResource("9_efxa6")
+
+[node name="SecondLife" type="Sprite2D" parent="Hud"]
+texture_filter = 1
+position = Vector2(1786, 975)
+texture = ExtResource("9_efxa6")
+
+[node name="BgBorder" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(270, 324)
+texture = ExtResource("9_4c57u")
+
+[node name="BgScore" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(270, -79)
+texture = ExtResource("9_kek77")
+
+[node name="DialogBox" type="Label" parent="."]
+texture_filter = 1
+offset_left = 955.0
+offset_top = 131.0
+offset_right = 1461.0
+offset_bottom = 610.0
+theme_override_fonts/font = ExtResource("2_0xm2m")
+theme_override_font_sizes/font_size = 22
+text = "Welcome to Pong?"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Obstacle1" parent="." instance=ExtResource("16_80cx4")]
+visible = false
+position = Vector2(265, 284)
+collision_layer = 3
+
+[node name="Obstacle2" parent="." instance=ExtResource("16_80cx4")]
+visible = false
+position = Vector2(100, 100)
+collision_layer = 3
+
+[node name="Obstacle3" parent="." instance=ExtResource("16_80cx4")]
+visible = false
+position = Vector2(431, 468)
+collision_layer = 3
+
+[node name="PauseMenu" parent="." instance=ExtResource("12_iotsf")]
+visible = false
+anchors_preset = -1
+anchor_left = -384.0
+anchor_top = -170.0
+anchor_right = -384.0
+anchor_bottom = -170.0
+offset_left = 576.0
+offset_top = 446.0
+offset_right = 576.0
+offset_bottom = 446.0
+
+[node name="paddleSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("13_7sc4i")
+volume_db = -25.0
+
+[node name="wallSound" type="AudioStreamPlayer" parent="."]
+stream = SubResource("AudioStreamWAV_80cx4")
+volume_db = -25.0
+
+[node name="scoreSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("15_e8heu")
+volume_db = -25.0
+
+[node name="scoreCPUSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("15_7sc4i")
+volume_db = -25.0
+
+[node name="PressSpaceToStart" type="Label" parent="."]
+texture_filter = 1
+offset_left = 955.0
+offset_top = 633.0
+offset_right = 1530.0
+offset_bottom = 660.0
+theme_override_colors/font_color = Color(0.996078, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_0xm2m")
+theme_override_font_sizes/font_size = 22
+text = "Press space to continue"
+
+[connection signal="timeout" from="BallTimer" to="." method="_on_ball_timer_timeout"]
+[connection signal="body_entered" from="ScoreLeft" to="." method="_on_score_left_body_entered"]
+[connection signal="body_entered" from="ScoreRight" to="." method="_on_score_right_body_entered"]

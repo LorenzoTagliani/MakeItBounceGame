@@ -1,0 +1,67 @@
+[gd_scene load_steps=3 format=3 uid="uid://clb3bldgxmww"]
+
+[ext_resource type="FontFile" uid="uid://2uogi8ffnv1o" path="res://assets/pixel_font.ttf" id="1_hdmo1"]
+[ext_resource type="Script" uid="uid://bsexla3gm4ipg" path="res://pause_menu.gd" id="1_nwcfo"]
+
+[node name="PauseMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -1070.0
+offset_bottom = -860.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_nwcfo")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 950.0
+offset_bottom = 242.0
+color = Color(0, 0, 0, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="ColorRect"]
+layout_mode = 0
+offset_left = 50.0
+offset_top = 50.0
+offset_right = 900.0
+offset_bottom = 192.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ColorRect/MarginContainer"]
+layout_mode = 2
+
+[node name="Resume" type="Button" parent="ColorRect/MarginContainer/VBoxContainer"]
+texture_filter = 1
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_hdmo1")
+theme_override_font_sizes/font_size = 60
+text = "Resume"
+
+[node name="Quit" type="Button" parent="ColorRect/MarginContainer/VBoxContainer"]
+texture_filter = 1
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_hdmo1")
+theme_override_font_sizes/font_size = 60
+text = "Back to menu"
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 950.0
+offset_bottom = 16.0
+
+[node name="ColorRect3" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 16.0
+offset_bottom = 242.0
+
+[node name="ColorRect4" type="ColorRect" parent="."]
+layout_mode = 0
+offset_top = 226.0
+offset_right = 950.0
+offset_bottom = 242.0
+
+[node name="ColorRect5" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 934.0
+offset_right = 950.0
+offset_bottom = 242.0

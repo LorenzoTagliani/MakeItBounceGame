@@ -1,0 +1,10 @@
+Version 1.0.2:
+-> The game is now a bit easier
+-> The starting ball speed change with the level
+-> The tutorial is not static
+
+Version 1.0.1:
+-> Fixed ball generation bug with continuous space press
+-> Increased ball size
+-> Added two new levels
+

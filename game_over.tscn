@@ -1,0 +1,59 @@
+[gd_scene load_steps=4 format=3 uid="uid://daawdu1xlchhp"]
+
+[ext_resource type="Script" uid="uid://ce5qdha0r3t70" path="res://game_over.gd" id="1_ccer4"]
+[ext_resource type="FontFile" uid="uid://2uogi8ffnv1o" path="res://assets/pixel_font.ttf" id="1_y26ei"]
+[ext_resource type="Texture2D" uid="uid://b6jn1ll825i0u" path="res://assets/mainMenu.png" id="1_yxx3c"]
+
+[node name="GameOver" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ccer4")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(962.5, 600.5)
+scale = Vector2(1.76823, 1.10648)
+texture = ExtResource("1_yxx3c")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 630.0
+offset_right = 1923.0
+offset_bottom = 1710.0
+color = Color(0, 0, 0, 1)
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -338.0
+offset_top = 507.0
+offset_right = 344.0
+offset_bottom = 609.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("1_y26ei")
+theme_override_font_sizes/font_size = 50
+text = "Back to Menu"
+
+[node name="GameOver" type="Label" parent="."]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -270.0
+offset_top = 304.0
+offset_right = 270.0
+offset_bottom = 364.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("1_y26ei")
+theme_override_font_sizes/font_size = 60
+text = "Game Over"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

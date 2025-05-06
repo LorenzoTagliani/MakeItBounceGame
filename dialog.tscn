@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=3 uid="uid://1xf6kaqq2mo0"]
+
+[ext_resource type="Script" uid="uid://bv47ec010a7wa" path="res://dialog.gd" id="1_7voku"]
+
+[node name="Dialog" type="Node"]
+script = ExtResource("1_7voku")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 1338.0
+offset_top = 300.0
+offset_right = 1843.0
+offset_bottom = 838.0
+
+[node name="next_char" type="Timer" parent="."]
+
+[node name="next_message" type="Timer" parent="."]
