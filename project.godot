@@ -19,9 +19,11 @@ config/icon="uid://drvl4p2n0shbk"
 
 [display]
 
-window/size/viewport_width=1920
-window/size/viewport_height=1080
-window/size/mode=3
+window/size/viewport_width=1600
+window/size/viewport_height=900
+window/size/resizable=false
+window/stretch/mode="viewport"
+window/stretch/scale=0.83
 
 [input]
 

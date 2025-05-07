@@ -13,29 +13,28 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_yaxkf")
 
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+color = Color(0, 0, 0, 1)
+
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture_filter = 1
-position = Vector2(962.5, 814.5)
+position = Vector2(959, 823)
 scale = Vector2(1.76823, 1.10648)
 texture = ExtResource("1_ds8y7")
 
-[node name="ColorRect" type="ColorRect" parent="."]
-layout_mode = 0
-offset_left = 3.0
-offset_top = 856.0
-offset_right = 1923.0
-offset_bottom = 1936.0
-color = Color(0, 0, 0, 1)
-
 [node name="Button" type="Button" parent="."]
+texture_filter = 1
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -338.0
-offset_top = 720.0
-offset_right = 344.0
-offset_bottom = 822.0
+offset_left = -182.0
+offset_top = 729.0
+offset_right = 500.0
+offset_bottom = 831.0
 grow_horizontal = 2
 theme_override_fonts/font = ExtResource("2_yaxkf")
 theme_override_font_sizes/font_size = 50
@@ -47,10 +46,10 @@ layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -660.0
-offset_top = 338.0
-offset_right = 660.0
-offset_bottom = 622.0
+offset_left = -672.0
+offset_top = 424.0
+offset_right = 992.0
+offset_bottom = 708.0
 grow_horizontal = 2
 theme_override_fonts/font = ExtResource("2_yaxkf")
 theme_override_font_sizes/font_size = 60
@@ -60,29 +59,28 @@ updates"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="ColorRect2" type="ColorRect" parent="."]
-layout_mode = 0
-offset_left = -420.0
-offset_top = -813.0
-offset_right = 2283.0
-offset_bottom = 267.0
-color = Color(0, 0, 0, 1)
-
 [node name="Congrats" type="Label" parent="."]
 texture_filter = 1
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -642.0
-offset_top = 58.0
-offset_right = 678.0
-offset_bottom = 342.0
+offset_left = -608.0
+offset_top = 127.0
+offset_right = 928.0
+offset_bottom = 411.0
 grow_horizontal = 2
 theme_override_fonts/font = ExtResource("2_yaxkf")
 theme_override_font_sizes/font_size = 100
 text = "CONGRATULATIONS"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+layout_mode = 0
+offset_top = 864.0
+offset_right = 1920.0
+offset_bottom = 1944.0
+color = Color(0, 0, 0, 1)
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

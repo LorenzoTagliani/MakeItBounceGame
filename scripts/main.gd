@@ -1,4 +1,5 @@
-extends Sprite2D
+#extends Sprite2D
+extends Node2D
 
 var score := [0, 0] # 0:Player, 1: CPU
 var PADDLE_SPEED_PLAYER := 650

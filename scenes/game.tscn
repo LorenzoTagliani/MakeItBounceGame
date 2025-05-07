@@ -39,10 +39,7 @@ size = Vector2(48, 648)
 data = PackedByteArray("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AJIQJIQJIQIEhAkhAkhAkgECSECSECSEAJIQJIQJIQIEhAkhAkhAkgECSECSECSEAJIQJIQJIQIEhAkhAkhAkgECSECSECSEAJIQJIQJIQIEhAkhAkhAkgECSECSECSEAJIQJIQJIQIEhAkhAkhAkgECSECSECSEAJIQJIQJIQIEhAkhAkhAkgECSECSECSEAJIQJIQJIQIEhAkhAkhAkgECSECSECSEAJIQJIQJIQIEhAkhAkhAkgECSECSECSEAJIQJIQJIQIEhAkhAkhAkgECSECSECSEAJIQJIQJIQIEhAkhAkhAkgECSECSECSEAJIQJIQJIQIEhAkhAkhAkgECSECSECSEAJIQJIQJIQIEhAkhAkhAkgECSECSECSEAJIQJIQJIQIEhAkhAkhAkgECSECSECSEAJIQJIQJIQIEhAkhAkhAkgECSECSECSEAJIQJIQJIQIEhAkhAkhAkgECSECSECSEAJIQJIQJIQIEhAkhAkhAkgECSECSECSEAJIQJIQJIQIEhAkhAkhAkgECSECSECSEAJIQJIQJIQIEhAkhAkhAkgECSECSECSEAJIQJIQJIQIEhAkhAkhAkgECSECSECSEAJIQJIQJIQIEhAkhAkhAkgECSECSECSEAJIQJIQJIQIEhAkhAkhAkgECSECSECSEAJIQJIQJIQIEhAkhAkhAkgECSECSECSEAJIQJIQJIQIEhAkhAkhAkgECSECSECSEAQCsRAaPArj/Af8C/wH/AvBVIhvOhT9PAJIQJIQJIQIEhAkhAkhAkgECSECSECSEAJIQJIQJIQIEhAkhAkhAkgECSECSECSEAJIQJIQJIQIEhAkhAkhAkgECSECSECSEAJIQJIQJIQIEhAkhAkhAkgECSECSECSEAJIQJIQJIQIEhAkhAkhAkgECSECSECSEAJIQJIQJIQIEhAkhAkhAkgECSECSECSEAJIQJIQJIQIEhAkhAkhAkgECSECSECSEAJIQJIQJIQIEhAkhAkhAkgECSECSECSEAJIQJIQJIQIEhAkhAkhAkgECSECSECSEAJIQJIQJIQIEhAkhAkhAkgECSECSECSEAJIQJIQJIQIEhAkhAkhAkgECSECSECSEAJIQJIQJIQIEhAkhAkhAkgECSECSECSEAJIQJIQJIQIEhAkhAkhAkgECSECSECSEAJIQJIQJIQIEhAkhAkhAkgECSECSECSEAJIQJIQJIQIEhAkhAkhAkgECSECSECSEAJIQJIQJIQIEhAkhAkhAkgECSECSECSEAJIQJIQJIQIEhAkhAkhAkgECSECSECSEAJIQJIQJIQIEhAkhAkhAkgECSECSECSEAJIQJIQJIQIEhAkhAkhAkgECSECSECSEAJIQJIQJIQIEhAkhAkhAkgECSECSECSEAJIQJIQJIQIEhAkhAkhAkgECSECSECSEAJIQJIQJIQIEhAkhAkhAkgECSECSECSEAJIQJIQJIQIEhAkhAkhAkgECSECSECSEAJIQJIQJIQIEhAkhAkhAkgECSECSECSEAJIQJIQJIQIEhAkhAkhAkgECSECSECSEAJIQJIQJIQIEhAkhAkhAkgECSECSECSEAJIQJIQJIQIEhAkhAkhAkgECSECSECSEAJIQJIQJIQIEhAkhAkhAkgECSECSECSA")
 format = 3
 
-[node name="Main" type="Sprite2D"]
-texture_filter = 1
-position = Vector2(384, 170)
-centered = false
+[node name="Main" type="Node2D"]
 script = ExtResource("2_h2yge")
 
 [node name="BallTimer" type="Timer" parent="."]
@@ -50,12 +47,12 @@ one_shot = true
 
 [node name="FullBG" type="Sprite2D" parent="."]
 texture_filter = 1
-position = Vector2(576, 370)
 texture = ExtResource("2_4c57u")
+centered = false
 
 [node name="Campo" type="Sprite2D" parent="."]
 texture_filter = 1
-position = Vector2(270, 324)
+position = Vector2(654, 530)
 texture = ExtResource("1_ig7tw")
 
 [node name="NetCover" type="ColorRect" parent="."]
@@ -67,7 +64,7 @@ color = Color(0, 0, 0, 1)
 
 [node name="Player" type="StaticBody2D" parent="."]
 texture_filter = 1
-position = Vector2(-256, 324)
+position = Vector2(94, 530)
 scale = Vector2(1, 1.5)
 script = ExtResource("3_1bvp3")
 
@@ -86,7 +83,7 @@ position = Vector2(16, 0)
 shape = SubResource("RectangleShape2D_ig7tw")
 
 [node name="CPU" type="StaticBody2D" parent="."]
-position = Vector2(776, 324)
+position = Vector2(1194, 530)
 scale = Vector2(1, 0.7)
 script = ExtResource("4_7mycd")
 
@@ -104,7 +101,7 @@ position = Vector2(4, 0)
 shape = SubResource("RectangleShape2D_4c57u")
 
 [node name="Ball" type="CharacterBody2D" parent="."]
-position = Vector2(270, 324)
+position = Vector2(654, 530)
 collision_mask = 3
 script = ExtResource("4_lquwl")
 
@@ -116,29 +113,26 @@ texture_filter = 1
 texture = ExtResource("6_272bh")
 
 [node name="Borders" type="StaticBody2D" parent="."]
-position = Vector2(-306, 0)
 collision_layer = 2
 
 [node name="Top" type="CollisionShape2D" parent="Borders"]
-position = Vector2(576, -20)
+position = Vector2(654, 186)
 shape = SubResource("RectangleShape2D_h2yge")
 
 [node name="Bottom" type="CollisionShape2D" parent="Borders"]
-position = Vector2(576, 668)
+position = Vector2(654, 874)
 shape = SubResource("RectangleShape2D_1bvp3")
 
 [node name="ScoreLeft" type="Area2D" parent="."]
-position = Vector2(-306, 0)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ScoreLeft"]
-position = Vector2(-24, 324)
+position = Vector2(54, 530)
 shape = SubResource("RectangleShape2D_lquwl")
 
 [node name="ScoreRight" type="Area2D" parent="."]
-position = Vector2(-306, 0)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ScoreRight"]
-position = Vector2(1176, 324)
+position = Vector2(1254, 530)
 shape = SubResource("RectangleShape2D_lquwl")
 
 [node name="Hud" type="CanvasLayer" parent="."]
@@ -146,9 +140,9 @@ shape = SubResource("RectangleShape2D_lquwl")
 [node name="PlayerScore" type="Label" parent="Hud"]
 texture_filter = 1
 offset_left = 442.0
-offset_top = 96.0
+offset_top = 133.0
 offset_right = 492.0
-offset_bottom = 146.0
+offset_bottom = 183.0
 theme_override_fonts/font = ExtResource("2_0xm2m")
 theme_override_font_sizes/font_size = 50
 text = "0"
@@ -159,9 +153,9 @@ metadata/_edit_use_anchors_ = true
 [node name="CPU" type="Label" parent="Hud"]
 texture_filter = 1
 offset_left = 816.0
-offset_top = 96.0
+offset_top = 133.0
 offset_right = 866.0
-offset_bottom = 146.0
+offset_bottom = 183.0
 theme_override_fonts/font = ExtResource("2_0xm2m")
 theme_override_font_sizes/font_size = 50
 text = "0"
@@ -171,10 +165,10 @@ metadata/_edit_use_anchors_ = true
 
 [node name="LabelScore" type="Label" parent="Hud"]
 texture_filter = 1
-offset_left = 529.0
-offset_top = 51.0
-offset_right = 779.0
-offset_bottom = 101.0
+offset_left = 530.0
+offset_top = 80.0
+offset_right = 780.0
+offset_bottom = 130.0
 theme_override_fonts/font = ExtResource("2_0xm2m")
 theme_override_font_sizes/font_size = 50
 text = "Score"
@@ -324,20 +318,21 @@ texture = ExtResource("9_efxa6")
 
 [node name="BgBorder" type="Sprite2D" parent="."]
 texture_filter = 1
-position = Vector2(270, 324)
+position = Vector2(46, 190)
 texture = ExtResource("9_4c57u")
+centered = false
 
 [node name="BgScore" type="Sprite2D" parent="."]
 texture_filter = 1
-position = Vector2(270, -79)
+position = Vector2(654, 127)
 texture = ExtResource("9_kek77")
 
 [node name="DialogBox" type="Label" parent="."]
 texture_filter = 1
-offset_left = 955.0
-offset_top = 131.0
-offset_right = 1461.0
-offset_bottom = 610.0
+offset_left = 1339.0
+offset_top = 309.0
+offset_right = 1845.0
+offset_bottom = 788.0
 theme_override_fonts/font = ExtResource("2_0xm2m")
 theme_override_font_sizes/font_size = 22
 text = "Welcome to Pong?"
@@ -361,15 +356,15 @@ collision_layer = 3
 
 [node name="PauseMenu" parent="." instance=ExtResource("12_iotsf")]
 visible = false
-anchors_preset = -1
-anchor_left = -384.0
-anchor_top = -170.0
-anchor_right = -384.0
-anchor_bottom = -170.0
-offset_left = 576.0
-offset_top = 446.0
-offset_right = 576.0
-offset_bottom = 446.0
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 485.0
+offset_top = 419.0
+offset_right = 485.0
+offset_bottom = 419.0
 
 [node name="paddleSound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("13_7sc4i")
@@ -389,10 +384,10 @@ volume_db = -25.0
 
 [node name="PressSpaceToStart" type="Label" parent="."]
 texture_filter = 1
-offset_left = 955.0
-offset_top = 633.0
-offset_right = 1530.0
-offset_bottom = 660.0
+offset_left = 1341.0
+offset_top = 811.0
+offset_right = 1848.0
+offset_bottom = 838.0
 theme_override_colors/font_color = Color(0.996078, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_0xm2m")
 theme_override_font_sizes/font_size = 22
