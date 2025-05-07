@@ -126,7 +126,7 @@ func _on_pause_menu_resume():
 
 func _on_quit_pressed():
 	$BallTimer.stop()
-	get_tree().change_scene_to_file("res://mainMenu.tscn")
+	get_tree().change_scene_to_file("res://scenes/mainMenu.tscn")
 
 func _on_ball_timer_timeout() -> void:
 	$Ball.new_ball()
