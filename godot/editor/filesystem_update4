@@ -1,7 +1,0 @@
-res://game.tscn
-res://main.gd
-res://game_completed.tscn
-res://pause_menu.tscn
-res://ball.gd
-res://obstacle.tscn
-res://obstacle.gd
