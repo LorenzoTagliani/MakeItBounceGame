@@ -40,6 +40,7 @@ func _physics_process(delta: float) -> void:
 			if speed < SPEED_CAP:
 				speed += ACCL
 			dir = new_direction(collider)
+			print('Ball Speed: ', speed)
 		elif collider == $"../Obstacle1" or collider == $"../Obstacle2" or collider == $"../Obstacle3":
 			$"../wallSound".play()
 			if speed < SPEED_CAP:

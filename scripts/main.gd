@@ -6,7 +6,7 @@ var PADDLE_SPEED_PLAYER := 650
 var PADDLE_SPEED_CPU := 350
 var PADDLE_SIZE_PLAYER := 1.5
 var PADDLE_SIZE_CPU := 0.7
-var current_level := 8
+var current_level := 1
 var current_lives := 2
 var paused := false
 var pause_menu
@@ -309,7 +309,7 @@ func round_end():
 					dialog_counter += 1;
 		elif current_level >= 8:
 			$BallTimer.stop()
-			get_tree().change_scene_to_file("res://game_completed.tscn")
+			get_tree().change_scene_to_file("res://scenes/game_completed.tscn")
 		
 	elif score[1] >= current_needed_points:
 		score[0] = 0
