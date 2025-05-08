@@ -9,7 +9,7 @@ var locked_movement : bool = true
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	win_height = 648
+	win_height = 855
 	p_height = get_parent().PADDLE_SIZE_CPU * 100  # Usa il valore dal parent
 	change_paddle_height()
 
@@ -31,9 +31,9 @@ func _process(delta: float) -> void:
 		else:
 			move_by = dist
 		position.y -= move_by
-		position.y = clamp(position.y, p_height / 2, win_height - p_height / 2)
+		position.y = clamp(position.y, 206 + (p_height/2), win_height - p_height / 2)
 
 func reset_position():
-	position.x = 776
-	position.y = 324
+	position.x = 1194
+	position.y = 530
 	

@@ -6,7 +6,7 @@ var PADDLE_SPEED_PLAYER := 650
 var PADDLE_SPEED_CPU := 350
 var PADDLE_SIZE_PLAYER := 1.5
 var PADDLE_SIZE_CPU := 0.7
-var current_level := 1
+var current_level := 8
 var current_lives := 2
 var paused := false
 var pause_menu
@@ -223,40 +223,40 @@ func set_stats():
 			$Ball.change_start_speed(600)
 		6:
 			PADDLE_SPEED_PLAYER = 600
-			PADDLE_SPEED_CPU = 450
+			PADDLE_SPEED_CPU = 470
 			$Hud/PlayerSpeedINT.text = str(60)
-			$Hud/CPUSpeedINT.text = str(45)
+			$Hud/CPUSpeedINT.text = str(47)
 			PADDLE_SIZE_PLAYER = 1.2
-			PADDLE_SIZE_CPU = 0.8
+			PADDLE_SIZE_CPU = 0.9
 			$Hud/PlayerSizeINT.text = str(12)
-			$Hud/CPUSizeINT.text = str(8)
+			$Hud/CPUSizeINT.text = str(9)
 			$Player.change_paddle_height()
 			$CPU.change_paddle_height()
 			$Ball.change_start_speed(650)
 		7:
 			PADDLE_SPEED_PLAYER = 600
-			PADDLE_SPEED_CPU = 450
+			PADDLE_SPEED_CPU = 480
 			$Hud/PlayerSpeedINT.text = str(60)
-			$Hud/CPUSpeedINT.text = str(45)
+			$Hud/CPUSpeedINT.text = str(48)
 			PADDLE_SIZE_PLAYER = 1.2
-			PADDLE_SIZE_CPU = 0.9
+			PADDLE_SIZE_CPU = 1.0
 			$Hud/PlayerSizeINT.text = str(12)
-			$Hud/CPUSizeINT.text = str(9)
+			$Hud/CPUSizeINT.text = str(10)
 			$Player.change_paddle_height()
 			$CPU.change_paddle_height()
 			$NetCover.show()
 			$Obstacle1.show()
 			$Obstacle1.get_node("CollisionShape2D").set_deferred("disabled", false)
-			$Ball.change_start_speed(650)
+			$Ball.change_start_speed(700)
 		8:
 			PADDLE_SPEED_PLAYER = 550
-			PADDLE_SPEED_CPU = 475
+			PADDLE_SPEED_CPU = 490
 			$Hud/PlayerSpeedINT.text = str(55)
-			$Hud/CPUSpeedINT.text = str(50)
+			$Hud/CPUSpeedINT.text = str(49)
 			PADDLE_SIZE_PLAYER = 1.2
-			PADDLE_SIZE_CPU = 0.9
+			PADDLE_SIZE_CPU = 1.0
 			$Hud/PlayerSizeINT.text = str(12)
-			$Hud/CPUSizeINT.text = str(9)
+			$Hud/CPUSizeINT.text = str(10)
 			$Player.change_paddle_height()
 			$CPU.change_paddle_height()
 			$NetCover.show()
@@ -266,7 +266,7 @@ func set_stats():
 			$Obstacle2.get_node("CollisionShape2D").set_deferred("disabled", false)
 			$Obstacle3.show()
 			$Obstacle3.get_node("CollisionShape2D").set_deferred("disabled", false)
-			$Ball.change_start_speed(700)
+			$Ball.change_start_speed(750)
 
 func _on_score_left_body_entered(body: Node2D) -> void:
 	$scoreCPUSound.play()

@@ -5,7 +5,7 @@ var p_height : int
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	win_height = 648
+	win_height = 855
 	p_height = get_parent().PADDLE_SIZE_PLAYER * 100  # Inizializza p_height
 	change_paddle_height()
 
@@ -24,8 +24,8 @@ func _process(delta: float) -> void:
 	elif Input.is_action_pressed("ui_down"):
 		position.y += get_parent().PADDLE_SPEED_PLAYER * delta
 	
-	position.y = clamp(position.y, p_height / 2, win_height - p_height / 2)
+	position.y = clamp(position.y, 206 + (p_height/2), win_height - p_height / 2)
 
 func reset_position():
-	position.x = -256
-	position.y = 324
+	position.x = 94
+	position.y = 530

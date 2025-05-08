@@ -15,18 +15,19 @@ func _ready():
 	win_size.y = 648
 
 func change_start_speed(speed):
-	START_SPEED = speed
+	START_SPEED = speed # Start speed della palla
 
-func new_ball():
-	position.x = 270
-	var y_pos
-	if randf() < 0.5: 
+func new_ball(): #Inizializza una nuova palla
+	position.x = 654 #Posizione della x della palla (sempre la stessa, centro campo)
+	var y_pos #inizializzazione posizione y
+	if randf() < 0.5: #calcolo posizione y
 		y_pos = randi_range(200, 277)
 	else: 
 		y_pos = randi_range(371, win_size.y - 200)
 	
-	position.y = y_pos
+	position.y = y_pos 
 	speed = START_SPEED
+	# print("Posizione della pallina x: " + str(position.x) + ", y: " + str(position.y)), serve per debug per stampare la posizione della pallina
 	dir = random_direction()
 	
 func _physics_process(delta: float) -> void:
