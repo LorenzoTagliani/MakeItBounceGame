@@ -341,17 +341,17 @@ vertical_alignment = 1
 
 [node name="Obstacle1" parent="." instance=ExtResource("16_80cx4")]
 visible = false
-position = Vector2(265, 284)
+position = Vector2(649, 490)
 collision_layer = 3
 
 [node name="Obstacle2" parent="." instance=ExtResource("16_80cx4")]
 visible = false
-position = Vector2(100, 100)
+position = Vector2(484, 306)
 collision_layer = 3
 
 [node name="Obstacle3" parent="." instance=ExtResource("16_80cx4")]
 visible = false
-position = Vector2(431, 468)
+position = Vector2(815, 674)
 collision_layer = 3
 
 [node name="PauseMenu" parent="." instance=ExtResource("12_iotsf")]
