@@ -62,12 +62,8 @@ func new_direction(collider):
 	var dist = ball_y - paddle_y
 	var new_dir := Vector2()
 	
-	# Ottieni p_height dinamicamente (aggiungi questo controllo)
 	var paddle_height = 150  # Default
-	if collider.has_method("get_paddle_height"):  # Aggiungi questo metodo ai paddle
-		paddle_height = collider.get_paddle_height()
-	
 	new_dir.x = -dir.x  # Inverte la direzione X
 	new_dir.y = (dist / (paddle_height / 2)) * MAX_Y_VECTOR
-	return new_dir.normalized()	
+	return new_dir.normalized()
 	
